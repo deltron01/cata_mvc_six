@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="utf-8">
+<title>Page Layout</title>
+<link rel="stylesheet" th:href="@{css/bootstrap.min.css}" />
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Gestion produits</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a th:href="@{/index}">Home</a></li>
+				<li><a th:href="@{/formProduit}">Produits</a></li>
+				<li><a>Catégories</a></li>
+				<li><a>Catalogue</a></li>
+			</ul>
+			<ul class="nav navbar-nav pull-right">
+			  <li> <a class="btn btn-default" th:href="@{/login?logout}"> Se déconnecter</a> </li>
+			</ul>
+		</div>
+	</nav>
+
+	<section layout:fragment="content1"></section>
+
+
+	<footer>
+		<div>FOOTER</div>
+	</footer>
+</body>
+</html>
